@@ -1,0 +1,26 @@
+{
+    "name": "monsieurluge/eot",
+    "type": "library",
+    "license": "The Unlicense",
+    "description": "East-oriented tests",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Laurent Vergé",
+            "email": "monsieurluge@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpmd/phpmd" : "@stable",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "monsieurluge\\EOT\\": "src/"
+        }
+    }
+}
