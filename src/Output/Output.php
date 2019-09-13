@@ -11,6 +11,8 @@ interface Output
      * Writes some text.
      *
      * @param string $text
+     *
+     * @return Output
      */
-    public function write(string $text): void;
+    public function write(string $text): Output;
 }

@@ -35,8 +35,10 @@ final class SimpleString implements Output
     /**
      * @inheritDoc
      */
-    public function write(string $text): void
+    public function write(string $text): Output
     {
         $this->content = sprintf('%s%s', $this->content, $text);
+
+        return $this;
     }
 }
