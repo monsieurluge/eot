@@ -14,7 +14,7 @@ final class IsTrueTest extends TestCase
     /**
      * @covers monsieurluge\EOT\Test\IsTrue::run
      */
-    public function testFalseInputExpressionFixme()
+    public function testFalseEvaluatedInputExpressionGeneratesFailureTestOutput()
     {
         // GIVEN the test
         $test = new IsTrue(function () { return false; });
@@ -31,7 +31,7 @@ final class IsTrueTest extends TestCase
     /**
      * @covers monsieurluge\EOT\Test\IsTrue::run
      */
-    public function testTrueInputExpressionFixme()
+    public function testTrueEvaluatedInputExpressionGeneratesSuccessfulTestOutput()
     {
         // GIVEN the test
         $test = new IsTrue(function () { return true; });
@@ -48,7 +48,7 @@ final class IsTrueTest extends TestCase
     /**
      * @covers monsieurluge\EOT\Test\IsTrue::run
      */
-    public function testTruthyInputExpressionFixme()
+    public function testTruthyEvaluatedInputExpressionGeneratesFailureTestOutput()
     {
         // GIVEN the test
         $test = new IsTrue(function () { return 1; });

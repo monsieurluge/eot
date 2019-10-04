@@ -6,6 +6,9 @@ use Closure;
 use monsieurluge\EOT\Output\Output;
 use monsieurluge\EOT\Test\Test;
 
+/**
+ * A test which "is true".
+ */
 final class IsTrue implements Test
 {
     /** @var Closure */
