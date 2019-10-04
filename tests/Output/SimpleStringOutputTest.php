@@ -1,6 +1,6 @@
 <?php
 
-namespace monsieurluge\EOT\Tests;
+namespace monsieurluge\EOT\Tests\Output;
 
 use PHPUnit\Framework\TestCase;
 use monsieurluge\EOT\Output\SimpleString as SimpleStringOutput;
