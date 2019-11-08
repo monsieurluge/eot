@@ -2,9 +2,11 @@
 
 namespace monsieurluge\EOT\Tests\Test;
 
-use PHPUnit\Framework\TestCase;
+use monsieurluge\EOT\Expression\Fake\ReturnsBooleanAsResult;
+use monsieurluge\EOT\Expression\Fake\ReturnsIntegerAsResult;
 use monsieurluge\EOT\Test\IsTrue;
 use monsieurluge\EOT\Output\SimpleString;
+use PHPUnit\Framework\TestCase;
 
 /**
  * "is true" Test tests suite.
@@ -17,7 +19,7 @@ final class IsTrueTest extends TestCase
     public function testFalseEvaluatedInputExpressionGeneratesFailureTestOutput()
     {
         // GIVEN the test
-        $test = new IsTrue(function () { return false; });
+        $test = new IsTrue(new ReturnsBooleanAsResult(false));
         // AND an basic output
         $output = new SimpleString();
 
@@ -34,7 +36,7 @@ final class IsTrueTest extends TestCase
     public function testTrueEvaluatedInputExpressionGeneratesSuccessfulTestOutput()
     {
         // GIVEN the test
-        $test = new IsTrue(function () { return true; });
+        $test = new IsTrue(new ReturnsBooleanAsResult(true));
         // AND an basic output
         $output = new SimpleString();
 
@@ -51,7 +53,7 @@ final class IsTrueTest extends TestCase
     public function testTruthyEvaluatedInputExpressionGeneratesFailureTestOutput()
     {
         // GIVEN the test
-        $test = new IsTrue(function () { return 1; });
+        $test = new IsTrue(new ReturnsIntegerAsResult(1));
         // AND an basic output
         $output = new SimpleString();
 
