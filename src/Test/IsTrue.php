@@ -2,7 +2,7 @@
 
 namespace monsieurluge\EOT\Test;
 
-use Closure;
+use monsieurluge\EOT\Expression\Expression;
 use monsieurluge\EOT\Output\Output;
 use monsieurluge\EOT\Test\Test;
 
@@ -11,13 +11,13 @@ use monsieurluge\EOT\Test\Test;
  */
 final class IsTrue implements Test
 {
-    /** @var Closure */
+    /** @var Expression */
     private $expression;
 
     /**
-     * @param Closure $expression
+     * @param Expression $expression
      */
-    public function __construct(Closure $expression)
+    public function __construct(Expression $expression)
     {
         $this->expression = $expression;
     }
@@ -27,8 +27,10 @@ final class IsTrue implements Test
      */
     public function run(Output $output): void
     {
-        true === ($this->expression)()
-            ? $output->write('vrai ;)')
-            : $output->write('faux!!');
+        $this->expression->evaluate(function ($result) use ($output) {
+            $result === true
+                ? $output->write('vrai ;)')
+                : $output->write('faux!!');
+        });
     }
 }
