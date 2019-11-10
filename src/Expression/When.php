@@ -5,7 +5,7 @@ namespace monsieurluge\EOT\Expression;
 use Closure;
 use monsieurluge\EOT\Expression\Expression;
 
-final class Then implements Expression
+final class When implements Expression
 {
     /** @var Closure */
     private $func;
