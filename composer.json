@@ -21,6 +21,7 @@
     "autoload": {
         "psr-4": {
             "monsieurluge\\EOT\\": "src/",
+            "monsieurluge\\EOT\\Demo\\": "demo/",
             "monsieurluge\\EOT\\Tests\\": "tests/",
             "monsieurluge\\EOT\\TestFake\\": "tests/Fake/"
         }
