@@ -1,5 +1,10 @@
 # eot
+
 East-oriented tests
+
+![EOT logo](eot.png)
+
+_PANTONE 213 C_
 
 ## examples
 
